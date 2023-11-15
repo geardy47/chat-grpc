@@ -1,0 +1,16 @@
+syntax = 'proto3';
+
+package chat;
+
+service Chat {
+  rpc Login(LoginRequest) returns (User) {}
+}
+
+message LoginRequest {
+  string username = 1;
+}
+
+message User {
+  string username = 1;
+  string fullname = 2;
+}
